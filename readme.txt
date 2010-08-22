@@ -10,35 +10,35 @@ Envia para o twitter os posts publicados, usando sua App Twitter OAuth.
 
 == Description ==
 
-O Tweet myPost, avisa na sua conta do twitter quando você publica uma nova postagem, usando a Twitter OAuth registrada por você, assim seu post sempre sairá com o "via Seu Blog".
+O Tweet myPost, avisa na sua conta do twitter quando vocÃª publica uma nova postagem, usando a Twitter OAuth registrada por vocÃª, assim seu post sempre sairÃ¡ com o "via Seu Blog".
 
 == Installation ==
 
-1. Envie a pasta `tweet-mypost` para o diretório `/wp-content/plugins/`
+1. Envie a pasta `tweet-mypost` para o diretÃ³rio `/wp-content/plugins/`
 2. Ative o plugin indo em 'Plugins' no menu WordPress
 3. Clique em 'Tweet myPost' no menu WordPress, e configure.
 
-Mais informações em [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
+Mais informaÃ§Ãµes em [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
 
 == Frequently Asked Questions ==
 
-= Tem como usar um encurtador próprio? =
+= Tem como usar um encurtador prÃ³prio? =
 
-Sim, apartir da versão 1.1 é possivel usar um encurtador a sua escolha.
-Quatro encurtadores já foram incluidos: is.gd, migre.me, vai.la e u.nu
-Em personalizado você pode usar o encurtador a sua escolha.
+Sim, apartir da versÃ£o 1.1 Ã© possivel usar um encurtador a sua escolha.
+Quatro encurtadores jÃ¡ foram incluidos: is.gd, migre.me, vai.la e u.nu
+Em personalizado vocÃª pode usar o encurtador a sua escolha.
 
-= Não sei configurar, você pode me ajudar? =
+= NÃ£o sei configurar, vocÃª pode me ajudar? =
 
 Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
 
 == Screenshots ==
 
-1. Página de configuração do Tweet myPost
+1. PÃ¡gina de configuraÃ§Ã£o do Tweet myPost
 2. Tweet enviado com o Tweet myPost
 
 == Changelog ==
 
 = 1.1 =
-* Adicionada a opção de formato do tweet.
-* Adicionada a opção de escolha de encurtadores.
+* Adicionada a opÃ§Ã£o de formato do tweet.
+* Adicionada a opÃ§Ã£o de escolha de encurtadores.
