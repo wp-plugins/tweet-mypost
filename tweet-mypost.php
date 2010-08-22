@@ -2,7 +2,7 @@
 /*
 Plugin Name: Tweet myPost
 Plugin URI: http://reitor.org/wp-plugins/tweet-mypost/
-Description: Envia para o twitter seu post utilizando sua propria Twitter OAuth.
+Description: Envia para o twitter seu post utilizando sua propria App Twitter OAuth.
 Version: 1.1
 Author: Reitor
 Author URI: http://reitor.org/
