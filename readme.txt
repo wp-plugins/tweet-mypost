@@ -18,7 +18,7 @@ O Tweet myPost, avisa na sua conta do twitter quando você publica uma nova post
 2. Ative o plugin indo em 'Plugins' no menu WordPress
 3. Clique em 'Tweet myPost' no menu WordPress, e configure.
 
-Mais informações em [http://reitor.org/wp-plugins/tweet_mypost/](http://reitor.org/wp-plugins/tweet_mypost/)
+Mais informações em [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
 
 == Frequently Asked Questions ==
 
@@ -28,4 +28,4 @@ Sim, proxima versão, isso será possivel.
 
 = Não sei configurar, você pode me ajudar? =
 
-Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet_mypost/](http://reitor.org/wp-plugins/tweet_mypost/)
+Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
