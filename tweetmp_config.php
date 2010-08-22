@@ -90,6 +90,10 @@ if (isset($_POST['submit'])) {
 </div>
 </div>
 </td>
+<div align="right">
+<input type="submit" name="submit" class="button-primary" value="Salvar alterações" />
+</form>
+</div>
 <td valign="top" width="50%">
 <div id="poststuff">
 <div class="postbox">
@@ -120,9 +124,6 @@ Registre sua <a href="http://dev.twitter.com/apps/new" target="_blank">Aplicaç�
 </div>
 </td>
 </tr>
-<div align="right">
-<input type="submit" name="submit" class="button-primary" value="Salvar alterações" />
-</form>
-</div>
+
 </table>
 </div>
