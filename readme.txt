@@ -14,7 +14,7 @@ O Tweet myPost, avisa na sua conta do twitter quando você publica uma nova post
 
 == Installation ==
 
-1. Envie a pasta `tweet_mypost` para o diretório `/wp-content/plugins/`
+1. Envie a pasta `tweet-mypost` para o diretório `/wp-content/plugins/`
 2. Ative o plugin indo em 'Plugins' no menu WordPress
 3. Clique em 'Tweet myPost' no menu WordPress, e configure.
 
