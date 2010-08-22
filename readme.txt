@@ -10,7 +10,7 @@ Envia para o twitter os posts publicados, usando OAuth da sua App.
 
 == Description ==
 
-O Tweet myPost, avisa na sua conta do twitter quando você publica uma nova postagem, usando a Twitter OAuth registrada por você, assim seu posta sempre sairá com o "via Seu Blog".
+O Tweet myPost, avisa na sua conta do twitter quando você publica uma nova postagem, usando a Twitter OAuth registrada por você, assim seu post sempre sairá com o "via Seu Blog".
 
 == Installation ==
 
