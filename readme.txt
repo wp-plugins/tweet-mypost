@@ -4,7 +4,7 @@ Donate link: http://reitor.org/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost
 Requires at least: 2.9
 Tested up to: 3.0.1
-Stable tag: 1.2
+Stable tag: 1.3
 
 Send to twitter the posts published, using your Twitter App OAuth.
 
