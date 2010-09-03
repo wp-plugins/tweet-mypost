@@ -3,7 +3,7 @@
 Plugin Name: Tweet myPost
 Plugin URI: http://reitor.org/wp-plugins/tweet-mypost/
 Description: Send to twitter the posts published, using your Twitter App OAuth.
-Version: 1.5
+Version: 1.6
 Author: Ronis Reitor
 Author URI: http://reitor.org/
 */

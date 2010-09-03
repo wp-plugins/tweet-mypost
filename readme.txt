@@ -1,5 +1,5 @@
 === Tweet myPost ===
-Contributors: Reitor
+Contributors: reitor
 Donate link: http://reitor.org/donate/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost
 Requires at least: 2.9
