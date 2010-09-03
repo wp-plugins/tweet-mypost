@@ -1,0 +1,118 @@
+# Translation of the WordPress plugin Tweet myPost 1.4 by Ronis Reitor.
+# Copyright (C) 2010 Ronis Reitor
+# This file is distributed under the same license as the Tweet myPost package.
+# Ronis Nascimento <ronis@reitor.org>, 2010.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Tweet myPost 1.4\n"
+"Report-Msgid-Bugs-To: http://wordpress.org/tag/tweet-mypost\n"
+"POT-Creation-Date: 2010-08-24 14:58+0000\n"
+"PO-Revision-Date: 2010-08-24 13:38-0300\n"
+"Last-Translator: Ronis 'Reitor' Nascimento <ronis@reitor.org>\n"
+"Language-Team: Ronis Nascimento (Reitor) <ronis@reitor.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Portuguese\n"
+"X-Poedit-Country: BRAZIL\n"
+"X-Poedit-SourceCharset: utf-8\n"
+
+#: tweet-mypost.php:18
+msgid "Unallowed"
+msgstr "Não permitido"
+
+#: tweet-mypost.php:51
+msgid "Tweet myPost &lsaquo; Settings"
+msgstr "Tweet myPost &lsaquo; Configurações"
+
+#: tweet-mypost.php:64
+msgid "Please Configure <strong>Tweet myPost</strong>"
+msgstr "Por favor, configure o <strong>Tweet myPost</strong>"
+
+#: tweet-mypost.php:94
+#: tweet-mypost.php:97
+msgid "Send to Twitter"
+msgstr "Enviar para o Twitter"
+
+#: tweetmp_config.php:3
+msgid "Tweet myPost Settings"
+msgstr "Configuração do Tweet myPost"
+
+#: tweetmp_config.php:29
+msgid "Settings updated."
+msgstr "Configurações salvas."
+
+#: tweetmp_config.php:40
+msgid "OAuth Twitter Settings"
+msgstr "OAuth Twitter Config."
+
+#: tweetmp_config.php:55
+msgid "Format tweet"
+msgstr "Formato do tweet"
+
+#: tweetmp_config.php:59
+msgid "Post title"
+msgstr "Titulo do post"
+
+#: tweetmp_config.php:60
+#: tweetmp_config.php:83
+msgid "Post URL"
+msgstr "URL do post"
+
+#: tweetmp_config.php:67
+msgid "Shorten"
+msgstr "Encurtador"
+
+#: tweetmp_config.php:79
+msgid "Custom"
+msgstr "Personalizado"
+
+#: tweetmp_config.php:88
+msgid "Update settings"
+msgstr "Salvar configurações"
+
+#: tweetmp_config.php:94
+msgid "Support"
+msgstr "Suporte"
+
+#: tweetmp_config.php:96
+msgid "Already have access token?"
+msgstr "Já tem a Access Token?"
+
+#: tweetmp_config.php:97
+msgid "Register your <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">application on Twitter</a>."
+msgstr "Registre sua <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">aplicação no Twitter</a>."
+
+#: tweetmp_config.php:99
+msgid "Step by step: <a href=\"http://www.reitor.org/wp-plugins/tweet-mypost/\" target=\"_blank\">www.reitor.org/wp-plugins/tweet-mypost/</a>"
+msgstr "Passo-a-passo: <a href=\"http://www.reitor.org/wp-plugins/tweet-mypost/\" target=\"_blank\">www.reitor.org/wp-plugins/tweet-mypost/</a>"
+
+#: tweetmp_config.php:106
+msgid "How to support me?"
+msgstr "Como me ajudar?"
+
+#: tweetmp_config.php:109
+msgid "Help me to improve the plugin."
+msgstr "Ajuda-me a melhorar o plugin."
+
+#: tweetmp_config.php:110
+msgid "Send me bug reports, bugfixes, code modifications or your ideas."
+msgstr "Envie-me relatos de bugs, correções, modificações de código ou as suas ideias."
+
+#: tweetmp_config.php:111
+msgid "Make a translation of the plugin."
+msgstr "Faça a tradução do plugin."
+
+#: tweetmp_config.php:112
+msgid "The give other users more comfort help me to translate it to all languages."
+msgstr "Para dar a outros usuários mais conforto, me ajudar a traduzi-lo para todos os idiomas."
+
+#: tweetmp_config.php:113
+msgid "Make A Donation"
+msgstr "Faça uma doação"
+
+#: tweetmp_config.php:120
+msgid "Share"
+msgstr "Compartilhe"
+
