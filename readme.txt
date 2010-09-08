@@ -4,7 +4,7 @@ Donate link: http://reitor.org/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost
 Requires at least: 2.9
 Tested up to: 3.0.1
-Stable tag: 1.6
+Stable tag: 1.7
 
 Send to twitter the posts published, using your Twitter App OAuth.
 
@@ -52,7 +52,7 @@ Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](
 = 1.7 =
 * Corrigido pequenos erros ao publicar novo post.
 * Adicionado variável %category% no campo de formato do tweet.
-* Adicionado variável %custom% no campo de formato do tweet (Ao enviar o post você pode definir qual mensagem será postada utilizando o "campos personalizado" (custom fields) 'tweetmp').
+* Adicionada a possibilidade de modificar o formato do tweet antes de enviar um novo post.
 
 = 1.6 =
 * Adicionado mais opções de encurtadores.

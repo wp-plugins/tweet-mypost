@@ -69,7 +69,7 @@ if (isset($_POST['submit'])) {
 <p>
 <input type="text" name="set_formatpost" size="60" value="<?php echo get_option('tweetmp_formatpost'); ?>"/><br/>
 <small>%title% - <?php echo __('Post title', 'tweet_mypost');?><br/>
-%category% - <?php echo __('Post Category', 'tweet_mypost');?><br/>
+%category% - <?php echo __('Post category', 'tweet_mypost');?><br/>
 %link% - <?php echo __('Post URL', 'tweet_mypost');?></small>
 </p>
 </div>

@@ -121,15 +121,13 @@ function tweetmp_box(){
 }else{
 	echo get_option('tweetmp_formatpost');
 } ?>" /></label></p>
-
 <?php if(get_post_meta($post->ID, 'tweetmsgstatus', true)){
 	echo "<a href='".get_post_meta($post->ID, 'tweetmsgstatus', true)."' target='_blank'>" . __('tweeted', 'tweet_mypost') . "</a>";
 }else{
 	if(get_post_meta($post->ID, 'tweetmsgpost', true)){
-		echo "<a href='http://twitter.com/home/?status=".get_post_meta($post->ID, 'tweetmsgpost', true)."' target='_blank'>" . __('Error: Send to Twitter', 'tweet_mypost') . "</a>";
+		echo "<a href='http://twitter.com/home/?status=".get_post_meta($post->ID, 'tweetmsgpost', true)."' target='_blank'>" . __('error sending tweet', 'tweet_mypost') . "</a>";
 	}
 } ?>
-
 <?php if(($post->post_status) != 'publish'){?>
 <p>
 <small>
