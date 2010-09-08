@@ -1,7 +1,7 @@
 === Tweet myPost ===
 Contributors: reitor
 Donate link: http://reitor.org/
-Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost
+Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost, md2.in, saf.li, goo.gl, tinyURL
 Requires at least: 2.9
 Tested up to: 3.0.1
 Stable tag: 1.7
