@@ -1,10 +1,10 @@
 === Tweet myPost ===
 Contributors: reitor
-Donate link: http://reitor.org/donate/
+Donate link: http://reitor.org/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost
 Requires at least: 2.9
 Tested up to: 3.0.1
-Stable tag: 1.6
+Stable tag: 1.7
 
 Send to twitter the posts published, using your Twitter App OAuth.
 
@@ -33,9 +33,10 @@ More information: [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org
 
 = Tem como usar um encurtador próprio? =
 
-Sim, apartir da versão 1.1 é possivel usar um encurtador a sua escolha.
-Quatro encurtadores já foram incluidos: is.gd, migre.me, vai.la e u.nu
+Sim, a partir da versão 1.1 é possível usar um encurtador a sua escolha.
+Quatro encurtadores já foram incluídos: is.gd, migre.me, vai.la e u.nu
 Em personalizado você pode usar o encurtador a sua escolha.
+Na versão 1.6, foram adicionados mais quatro encurtadores (goo.gl, tinyurl, md2.in e saf.li).
 
 = Não sei configurar, você pode me ajudar? =
 
@@ -48,11 +49,16 @@ Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](
 
 == Changelog ==
 
+= 1.7 =
+* Corrigido pequenos erros ao publicar novo post.
+* Adicionado variável %category% no campo de formato do tweet.
+* Adicionada a possibilidade de modificar o formato do tweet antes de enviar um novo post.
+
 = 1.6 =
 * Adicionado mais opções de encurtadores.
 
 = 1.5 =
-* Resolvido problema com acentos.
+* Resolvido problema com acentos. (Definitivo)
 
 = 1.4 =
 * Resolvido problema com acentos. (Os tweets com acentos não estavam sendo enviados)
