@@ -51,7 +51,7 @@ Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](
 
 = 1.7 =
 * Corrigido pequenos erros ao publicar novo post.
-* Adicionado variável %category% no campo de formato do tweet.
+* Adicionado variável %cat% no campo de formato do tweet.
 * Adicionada a possibilidade de modificar o formato do tweet antes de enviar um novo post.
 
 = 1.6 =
