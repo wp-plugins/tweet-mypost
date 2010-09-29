@@ -2,9 +2,9 @@
 /*
 Plugin Name: Tweet myPost
 Plugin URI: http://reitor.org/wp-plugins/tweet-mypost/
-Description: Send to twitter the posts published, using your Twitter App OAuth.
-Version: 1.7
-Author: Ronis Reitor
+Description: Send to twitter the posts published, using your Twitter App OAuth. In version 1.8 supports scheduling posts.
+Version: 1.8
+Author: Ronis Reitor, Bruno Braga
 Author URI: http://reitor.org/
 License: GPLv3
 */
@@ -64,11 +64,28 @@ function tweetmypost($format){
 	$category	= wp_get_post_categories($post->ID);
 	$category	= get_cat_name($category[0]);
 	$search		= array('%title%','%cat%','%link%');
-	$now		= array($title,$category,$post_url);
+	$now		= array($title,$category,$post_url);		
 	$tweet_mypost	= str_replace($search,$now,$_POST['tweetmsg_post']);
 	add_post_meta($post->ID, 'tweetmsgpost', $tweet_mypost, true) or update_post_meta($post->ID, 'tweetmsgpost', $tweet_mypost);
 	tmp_tweet($tweet_mypost);
 }
+
+
+function tweetmypost_schedule($postID){	
+	// Author: Bruno Braga
+	$post = get_post($postID);
+	$post_url	= tmp_shorturl(trim(get_permalink($post->ID)));
+	$title		= $post->post_title;
+	$category	= wp_get_post_categories($post->ID);
+	$category	= get_cat_name($category[0]);
+	$search		= array('%title%','%cat%','%link%');
+	$now		= array($title,$category,$post_url);
+	$strSearch  = get_option('tweetmp_formatpost');
+	$tweet_mypost	= str_replace($search,$now,$strSearch);
+	add_post_meta($post->ID, 'tweetmsgpost', $tweet_mypost, true) or update_post_meta($post->ID, 'tweetmsgpost', $tweet_mypost);
+	tmp_tweet($tweet_mypost);
+}
+
 function tweetmp_menu(){
 	if(function_exists('add_menu_page')){
 		add_menu_page(__('Tweet myPost &lsaquo; Settings', 'tweet_mypost'), 'Tweet myPost', 'manage_options', 'tweet_mypost', 'tweetmp_config');
@@ -139,10 +156,15 @@ function tweetmp_box(){
 }}
 add_action('admin_init', 'tweetmp_init');
 add_action('admin_menu', 'tweetmp_menu');
+
 if($_POST['tweetm_post'] == 'yes'){
-	add_action('publish_post', 'tweetmypost');
+	add_action('publish_post', 'tweetmypost');		
 }
+
+add_action ('publish_future_post', 'tweetmypost_schedule',10,1);
+
 add_action('admin_print_styles', 'addTweetmpStyle');
 register_activation_hook(__FILE__, 'tweetmp_install');
 register_deactivation_hook(__FILE__, 'tweetmp_uninstall' );
+
 ?>
