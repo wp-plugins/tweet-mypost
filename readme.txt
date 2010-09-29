@@ -49,7 +49,7 @@ Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](
 
 == Changelog ==
 = 1.8 =
-* Adicionada a possibilidade de enviar posts agendados. (Graças ao Bruno Braga)
+* Adicionada a possibilidade de enviar posts agendados. (Graças ao [Bruno Braga](http://www.opreh.com.br/))
 
 = 1.7 =
 * Corrigido pequenos erros ao publicar novo post.
