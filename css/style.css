@@ -1,0 +1,10 @@
+﻿#toplevel_page_tweet-mypost div.wp-menu-image {
+	background: transparent url(../images/icon.png) no-repeat  scroll center 0;
+}
+#toplevel_page_tweet-mypost:hover div.wp-menu-image,
+#toplevel_page_tweet-mypost.current div.wp-menu-image {
+	background: transparent url(../images/icon.png) no-repeat  scroll center -28px;
+}
+#toplevel_page_tweet-mypost div.wp-menu-image img {
+	display:none;
+}
