@@ -3,7 +3,7 @@
 Plugin Name: Tweet myPost
 Plugin URI: http://reitor.org/wp-plugins/tweet-mypost/
 Description: Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
-Version: 1.9
+Version: 1.9.1
 Author: Ronis Reitor, Bruno Braga
 Author URI: http://reitor.org/
 License: GPLv3
@@ -112,7 +112,7 @@ function tweetmp_add_box(){
 	}
 }
 function tweetmp_box(){
-	global $post;
+	global $post, $options;
 ?>
 <?php
 if(($post->post_status) != 'publish'){
@@ -144,7 +144,7 @@ if(($post->post_status) != 'publish'){
 				echo get_post_meta($post->ID, 'tweetmsg', true);
 			}
 			else{
-				echo get_option('tweetmp_formatpost');
+				echo $options['format'];
 			}
 		?>" />
 	</label>

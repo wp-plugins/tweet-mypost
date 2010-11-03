@@ -3,8 +3,8 @@ Contributors: reitor, Bruno Braga
 Donate link: http://reitor.org/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost, md2.in, saf.li, goo.gl, tinyURL, j.mp, bit.ly
 Requires at least: 2.9
-Tested up to: 3.0.1
-Stable tag: 1.9
+Tested up to: 3.1
+Stable tag: 1.9.1
 
 Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
 
@@ -49,6 +49,9 @@ Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](
 2. Tweet enviado com o Tweet myPost
 
 == Changelog ==
+= 1.9.1 =
+* Corrigido problema com o formato do tweet.
+
 = 1.9 =
 * Adicionado o encurtador bit.ly/j.mp
 * Refeita algumas funções
