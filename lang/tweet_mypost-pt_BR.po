@@ -98,10 +98,6 @@ msgstr "Já tem a Access Token?"
 msgid "Register your <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">application on Twitter</a>."
 msgstr "Registre sua <a href=\"http://dev.twitter.com/apps/new\" target=\"_blank\">aplicação no Twitter</a>."
 
-#: tweetmp_config.php:121
-msgid "Step by step: <a href=\"http://www.reitor.org/wp-plugins/tweet-mypost/\" target=\"_blank\">www.reitor.org/wp-plugins/tweet-mypost/</a>"
-msgstr "Passo-a-passo: <a href=\"http://www.reitor.org/wp-plugins/tweet-mypost/\" target=\"_blank\">www.reitor.org/wp-plugins/tweet-mypost/</a>"
-
 #: tweetmp_config.php:128
 msgid "How to support me?"
 msgstr "Como me ajudar?"

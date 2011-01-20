@@ -176,14 +176,11 @@
 						<h3 class="hndle"><?php echo __('Support', 'tweet_mypost');?></h3>
 						<div class="inside">
 							<p>
+							<strong>
 							<?php echo __('Already have access token?', 'tweet_mypost');?>
+							</strong>
 							<br/>
 							<?php echo __('Register your <a href="http://dev.twitter.com/apps/new" target="_blank">application on Twitter</a>.', 'tweet_mypost');?>
-							</p>
-							<p>
-							<small>*<em>
-							<?php echo __('Step by step: <a href="http://www.reitor.org/wp-plugins/tweet-mypost/" target="_blank">www.reitor.org/wp-plugins/tweet-mypost/</a>', 'tweet_mypost');?> (pt_BR)
-							</em></small>
 							</p>
 						</div>
 					</div>
@@ -215,7 +212,7 @@
 							<p>
 							<strong><?php echo __('Share', 'tweet_mypost');?></strong>
 							<br/>
-							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/tweet-mypost/" data-text="#wp #plugin I indicate Tweet myPost..." data-count="horizontal" data-via="Reitor">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/tweet-mypost/" data-text="#wp #plugin Tweet myPost. I use." data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 							<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwordpress.org%2Fextend%2Fplugins%2Ftweet-mypost%2F&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
 							</p>
 						</div>

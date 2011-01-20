@@ -1,10 +1,10 @@
 === Tweet myPost ===
-Contributors: reitor, Bruno Braga
-Donate link: http://reitor.org/
+Contributors: reitor
+Donate link: http://cybernerd.info/wp-plugins/tweet-mypost/
 Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost, md2.in, saf.li, goo.gl, tinyURL, j.mp, bit.ly
 Requires at least: 2.9
 Tested up to: 3.1
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 
 Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
 
@@ -27,7 +27,7 @@ O Tweet myPost adverte em sua conta no Twitter quando você publica um novo post
 2. Ative o plugin indo em 'Plugins' no menu WordPress
 3. Clique em 'Tweet myPost' no menu WordPress, e configure.
 
-More information: [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/) (in pt_BR)
+More information: [http://cybernerd.info/wp-plugins/tweet-mypost/](http://cybernerd.info/wp-plugins/tweet-mypost/) (in pt_BR)
 
 == Frequently Asked Questions ==
 
@@ -41,12 +41,17 @@ A versão 1.9 agora conta com o encurtador bit.ly/j.mp
 
 = Não sei configurar, você pode me ajudar? =
 
-Para saber como configurar, visite [http://reitor.org/wp-plugins/tweet-mypost/](http://reitor.org/wp-plugins/tweet-mypost/)
+Para saber como configurar, visite [http://cybernerd.info/wp-plugins/tweet-mypost/](http://cybernerd.info/wp-plugins/tweet-mypost/)
 
 == Screenshots ==
 
 1. Página de configuração do Tweet myPost
 2. Tweet enviado com o Tweet myPost
+
+== Changelog ==
+= 1.9.2 =
+* Corrigido pequenos erros.
+* Corrigido Tweet ID.
 
 == Changelog ==
 = 1.9.1 =

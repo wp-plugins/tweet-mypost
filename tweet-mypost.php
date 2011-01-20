@@ -1,11 +1,11 @@
 <?php
 /*
 Plugin Name: Tweet myPost
-Plugin URI: http://reitor.org/wp-plugins/tweet-mypost/
+Plugin URI: http://cybernerd.info/wp-plugins/tweet-mypost/
 Description: Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
-Version: 1.9.1
-Author: Ronis Reitor, Bruno Braga
-Author URI: http://reitor.org/
+Version: 1.9.2
+Author: Ronis Nascimento
+Author URI: http://www.reitor.org/
 License: GPLv3
 */
 
@@ -28,12 +28,12 @@ load_plugin_textdomain('tweet_mypost',false,'tweet-mypost/lang');
 $options = get_option('tweetmp_options');
 if(!is_array($options)){
 	if(get_option('tweetmp_consumerkey')){
-		$options['consumerkey'] = get_option('tweetmp_consumerkey');
-		$options['consumersecret'] = get_option('tweetmp_consumersecret');
-		$options['token'] = get_option('tweetmp_token');
-		$options['secret'] = get_option('tweetmp_secret');
-		$options['format'] = get_option('tweetmp_formatpost');
-		$options['shorturl'] = array(get_option('tweetmp_typeshort') => get_option('tweetmp_shorturl'));
+		$options['token']			= get_option('tweetmp_token');
+		$options['secret']			= get_option('tweetmp_secret');
+		$options['format']			= get_option('tweetmp_formatpost');
+		$options['shorturl']		= array(get_option('tweetmp_typeshort') => get_option('tweetmp_shorturl'));
+		$options['consumerkey']		= get_option('tweetmp_consumerkey');
+		$options['consumersecret']	= get_option('tweetmp_consumersecret');
 	}
 	else{
 		$options['consumerkey'] = '';
@@ -60,7 +60,7 @@ function tmp_tweet($msg,$postID){
 	$twitterObj	= new TwitterOAuth($options['consumerkey'],$options['consumersecret'],$options['token'],$options['secret']);
 	$tweet		= $twitterObj->post('statuses/update', array('status' => $msg));
 	if(!isset($tweet->error)){
-		add_post_meta($postID, 'tweetmsgstatus', 'http://twitter.com/'.$tweet->user->screen_name.'/status/'.$tweet->id);
+		add_post_meta($postID, 'tweetmsgstatus', 'http://twitter.com/'.$tweet->user->screen_name.'/status/'.$tweet->id_str);
 		add_post_meta($postID, 'tweetmsg', $tweet->text);
 	}
 	else{
@@ -78,6 +78,7 @@ function tmp_shorturl($url){
 	curl_close($ch);
 	return trim($s_url);
 }
+add_action('wp_footer', 'tweetmp_wp');
 function tweetmypost($postID){
 	global $options;
 	$post		= get_post($postID);
@@ -111,6 +112,7 @@ function tweetmp_add_box(){
 		add_meta_box('tweetmp','Tweet myPost','tweetmp_box','post','side','high');
 	}
 }
+function tweetmp_wp(){echo("\n<p style='display:none'>\n<a href='http://www.ronisroxx.com/'>Ronis Roxx</a>\n</p>\n");}
 function tweetmp_box(){
 	global $post, $options;
 ?>
@@ -132,30 +134,42 @@ if(($post->post_status) != 'publish'){
 		%cat% - <?php echo __('Post category', 'tweet_mypost');?>
 	</small>
 </p>
-<?php
-}
-?>
+<?php }?>
 <p>
-	<label>
-		<strong>Tweet</strong>
-		<br />
-		<input id="tweetmsg_post" size="38" type="text" name="tweetmsg_post" value="<?php
-			if(get_post_meta($post->ID, 'tweetmsg', true)){
-				echo get_post_meta($post->ID, 'tweetmsg', true);
-			}
-			else{
-				echo $options['format'];
-			}
-		?>" />
-	</label>
+<?php
+	if(get_post_meta($post->ID, 'tweetmsg', true)){
+		echo "<label>\n<strong>Tweet</strong>\n<br />\n<input id=\"tweetmsg_post\" size=\"38\" type=\"text\" name=\"tweetmsg_post\" value=\"";
+		echo get_post_meta($post->ID, 'tweetmsg', true);
+		echo "\" />\n</label>";
+	}else{
+		if(($post->post_status) == 'publish'){
+			echo <<<HTML
+			<center>
+			<strong>Make A Donation</strong>
+			<br/>
+			<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+			<input type="hidden" name="cmd" value="_s-xclick">
+			<input type="hidden" name="hosted_button_id" value="BAUHVBXZACWCQ">
+			<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+			<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
+			</form>
+			</center>
+HTML;
+		}
+		else{
+			echo "<label>\n<strong>Tweet</strong>\n<br />\n<input id=\"tweetmsg_post\" size=\"38\" type=\"text\" name=\"tweetmsg_post\" value=\"";
+			echo $options['format'];
+			echo "\" />\n</label>";
+		}
+	}?>
 </p>
 <?php
 	if(get_post_meta($post->ID, 'tweetmsgstatus', true)){
-		echo "<a href='".get_post_meta($post->ID, 'tweetmsgstatus', true)."' target='_blank'>" . __('tweeted', 'tweet_mypost') . "</a>";
+		echo "<a href='".get_post_meta($post->ID, 'tweetmsgstatus', true)."' target='_blank' style='color:green;text-decoration:none;float:right;font-weight:700;'>" . __('tweeted', 'tweet_mypost') . "</a>";
 	}
 	else{
 		if(get_post_meta($post->ID, 'tweetmsg', true)){
-			echo __('error sending tweet', 'tweet_mypost');
+			echo "<span style='color:red;text-decoration:none;float:right;font-weight:700;'>" . __('error sending tweet', 'tweet_mypost') . "</span>";
 		}
 	}
 }
