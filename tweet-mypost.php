@@ -3,9 +3,9 @@
 Plugin Name: Tweet myPost
 Plugin URI: http://cybernerd.info/wp-plugins/tweet-mypost/
 Description: Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
-Version: 1.9.2
+Version: 1.9.3
 Author: Ronis Nascimento
-Author URI: http://www.reitor.org/
+Author URI: http://www.ronis.com.br
 License: GPLv3
 */
 
@@ -78,7 +78,6 @@ function tmp_shorturl($url){
 	curl_close($ch);
 	return trim($s_url);
 }
-add_action('wp_footer', 'tweetmp_wp');
 function tweetmypost($postID){
 	global $options;
 	$post		= get_post($postID);
@@ -112,7 +111,6 @@ function tweetmp_add_box(){
 		add_meta_box('tweetmp','Tweet myPost','tweetmp_box','post','side','high');
 	}
 }
-function tweetmp_wp(){echo("\n<p style='display:none'>\n<a href='http://www.ronisroxx.com/'>Ronis Roxx</a>\n</p>\n");}
 function tweetmp_box(){
 	global $post, $options;
 ?>
