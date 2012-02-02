@@ -1,12 +1,11 @@
 === Tweet myPost ===
-Contributors: reitor
-Donate link: http://cybernerd.info/wp-plugins/tweet-mypost/
-Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, is.gd, u.nu, vai.la, pt_BR, tweet mypost, md2.in, saf.li, goo.gl, tinyURL, j.mp, bit.ly
+Contributors: GLOMM3R
+Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, vai.la, pt_BR, tweet mypost, tinyURL, bit.ly
 Requires at least: 2.9
-Tested up to: 3.1
-Stable tag: 1.9.3
+Tested up to: 3.3.1
+Stable tag: 1.9.4
 
-Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
+Supports scheduling posts.
 
 == Description ==
 
@@ -27,21 +26,16 @@ O Tweet myPost adverte em sua conta no Twitter quando você publica um novo post
 2. Ative o plugin indo em 'Plugins' no menu WordPress
 3. Clique em 'Tweet myPost' no menu WordPress, e configure.
 
-More information: [http://cybernerd.info/wp-plugins/tweet-mypost/](http://cybernerd.info/wp-plugins/tweet-mypost/) (in pt_BR)
 
 == Frequently Asked Questions ==
 
 = Tem como usar um encurtador próprio? =
 
-Sim, a partir da versão 1.1 é possível usar um encurtador a sua escolha.
-Quatro encurtadores já foram incluídos: is.gd, migre.me, vai.la e u.nu
-Em personalizado você pode usar o encurtador a sua escolha.
-Na versão 1.6, foram adicionados mais quatro encurtadores (goo.gl, tinyurl, md2.in e saf.li).
-A versão 1.9 agora conta com o encurtador bit.ly/j.mp
+Sim, é possível usar um encurtador a sua escolha.
 
 = Não sei configurar, você pode me ajudar? =
 
-Para saber como configurar, visite [http://cybernerd.info/wp-plugins/tweet-mypost/](http://cybernerd.info/wp-plugins/tweet-mypost/)
+Se não conseguiu configurar entre em contato: contato@reitor.org
 
 == Screenshots ==
 
@@ -49,6 +43,9 @@ Para saber como configurar, visite [http://cybernerd.info/wp-plugins/tweet-mypos
 2. Tweet enviado com o Tweet myPost
 
 == Changelog ==
+
+= 1.9.4 =
+* Corrigido pequenos erros.
 
 = 1.9.3 =
 * Corrigido pequenos erros.

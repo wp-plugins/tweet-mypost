@@ -14,31 +14,11 @@
 		if(trim($_POST['type_short']) == 'tinyurl'){
 			$options['shorturl']    = array('tinyurl' => 'http://tinyurl.com/api-create.php?url=%link%');
 		}
-		if(trim($_POST['type_short']) == 'md2.in'){
-			$options['shorturl']    = array('md2.in' => 'http://md2.in/api.php?url=%link%');
-		}
-		if(trim($_POST['type_short']) == 'goo.gl'){
-			$options['shorturl']    = array('goo.gl' => 'http://md2.in/googl.php?url=%link%');
-		}
 		if(trim($_POST['type_short']) == 'vai.la'){
 			$options['shorturl']    = array('vai.la' => 'http://vai.la/link/api/?url=%link%');
 		}
-		if(trim($_POST['type_short']) == 'is.gd'){
-			$options['shorturl']    = array('is.dg' => 'http://is.gd/api.php?longurl=%link%');
-		}
-		if(trim($_POST['type_short']) == 'saf.li'){
-			$options['shorturl']    = array('saf.li' => 'http://saf.li/create?ws=1&url=%link%');
-		}
-		if(trim($_POST['type_short']) == 'u.nu'){
-			$options['shorturl']    = array('u.nu' => 'http://u.nu/unu-api-simple?url=%link%');
-		}
 		if(trim($_POST['type_short']) == 'bit.ly'){
 			$options['shorturl']    = array('bit.ly' => 'http://api.bit.ly/v3/shorten?login='.trim($_POST['login']).'&apiKey='.trim($_POST['apikey']).'&longUrl=%link%&format=txt',
-											'login' => trim($_POST['login']),
-											'apiKey' => trim($_POST['apikey']));
-		}
-		if(trim($_POST['type_short']) == 'j.mp'){
-			$options['shorturl']    = array('j.mp' => 'http://api.j.mp/v3/shorten?login='.trim($_POST['login']).'&apiKey='.trim($_POST['apikey']).'&longUrl=%link%&format=txt',
 											'login' => trim($_POST['login']),
 											'apiKey' => trim($_POST['apikey']));
 		}
@@ -127,23 +107,11 @@
 						<table class="form-table">
 							<tr>
 								<td><label><input name="type_short" type="radio" value="tinyurl" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'tinyurl'){echo'checked';}?>/> tinyurl</label></td>
-								<td><label><input name="type_short" type="radio" value="goo.gl" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'goo.gl'){echo'checked';}?>/> goo.gl</label></td>
-							</tr>
-							<tr>
-								<td><label><input name="type_short" type="radio" value="saf.li" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'saf.li'){echo'checked';}?>/> saf.li</label></td>
-								<td><label><input name="type_short" type="radio" value="md2.in" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'md2.in'){echo'checked';}?>/> md2.in</label></td>
-							</tr>
-							<tr>
-								<td><label><input name="type_short" type="radio" value="is.gd" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'is.gd'){echo'checked';}?>/> is.gd</label></td>
 								<td><label><input name="type_short" type="radio" value="migre.me" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'migre.me'){echo'checked';}?>/> migre.me</label></td>
 							</tr>
 							<tr>
 								<td><label><input name="type_short" type="radio" value="vai.la" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'vai.la'){echo'checked';}?>/> vai.la</label></td>
-								<td><label><input name="type_short" type="radio" value="u.nu" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'u.nu'){echo'checked';}?>/> u.nu</label></td>
-							</tr>
-							<tr>
 								<td><label><input name="type_short" type="radio" value="bit.ly" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='block';" <?php if($shorturl[0] == 'bit.ly'){echo'checked';}?>/> bit.ly</label></td>
-								<td><label><input name="type_short" type="radio" value="j.mp" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='block';" <?php if($shorturl[0] == 'j.mp'){echo'checked';}?>/> j.mp</label></td>
 							</tr>
 							<tr>
 								<td><label><input name="type_short" type="radio" value="custom" onclick="document.getElementById('bitly').style.display='none'; document.getElementById('customapi').style.display='block';" <?php if($shorturl[0] == 'custom'){echo'checked';}?>/> <?php echo __('Custom', 'tweet_mypost');?></label></td>
@@ -156,8 +124,8 @@
 										<p><small>%link% - <?php echo __('Post URL', 'tweet_mypost');?></small></p>
 									</div>
 									<div id="bitly" style="display:none">
-										<label style="display:inline-block;width:125px;"><strong>Login bit.ly/j.mp</strong></label> <input name="login" size="25" type="text" value="<?php echo($login);?>" /><br />
-										<label style="display:inline-block;width:125px;"><strong>apiKey bit.ly/j.mp</strong></label> <input name="apikey" size="25" type="text" value="<?php echo($apikey);?>" />
+										<label style="display:inline-block;width:125px;"><strong>Login bit.ly</strong></label> <input name="login" size="25" type="text" value="<?php echo($login);?>" /><br />
+										<label style="display:inline-block;width:125px;"><strong>apiKey bit.ly</strong></label> <input name="apikey" size="25" type="text" value="<?php echo($apikey);?>" />
 									</div>
 								</td>
 							</tr>
@@ -200,20 +168,17 @@
 							<?php echo __('The give other users more comfort help me to translate it to all languages.', 'tweet_mypost');?>
 							</p>
 							<p>
-							<strong><?php echo __('Make A Donation', 'tweet_mypost');?></strong>
-							<br/>
-							<form action="https://www.paypal.com/cgi-bin/webscr" method="post">
-								<input type="hidden" name="cmd" value="_s-xclick">
-								<input type="hidden" name="hosted_button_id" value="BAUHVBXZACWCQ">
-								<input type="image" src="https://www.paypal.com/en_US/i/btn/btn_donateCC_LG.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
-								<img alt="" border="0" src="https://www.paypal.com/en_US/i/scr/pixel.gif" width="1" height="1">
-							</form>
-							</p>
-							<p>
 							<strong><?php echo __('Share', 'tweet_mypost');?></strong>
 							<br/>
 							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/tweet-mypost/" data-text="#wp #plugin Tweet myPost. I use." data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
 							<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwordpress.org%2Fextend%2Fplugins%2Ftweet-mypost%2F&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
+							</p>
+							<p>
+							<strong><?php echo __('Do you like?', 'tweet_mypost');?></strong>
+							<br/>
+							<a href="https://twitter.com/glomm3r" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @glomm3r</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fglomm3r&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=264202633641968" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
 							</p>
 						</div>
 					</div>
