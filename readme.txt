@@ -1,11 +1,11 @@
 === Tweet myPost ===
 Contributors: GLOMM3R
-Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migre.me, vai.la, pt_BR, tweet mypost, tinyURL, bit.ly
+Tags: post, publish, twitter, oauth, tweet, consumer key, consumer secret, migreme, vaila, pt_br, tweet mypost, tinyurl, bit.ly, português, twitterfeed
 Requires at least: 2.9
 Tested up to: 3.3.1
-Stable tag: 1.9.4
+Stable tag: 1.9.5
 
-Supports scheduling posts.
+Send to Twitter, the posts of your blog (like twitterfeed) using your own twitter oauth. Supports scheduling posts.
 
 == Description ==
 
@@ -43,6 +43,10 @@ Se não conseguiu configurar entre em contato: contato@reitor.org
 2. Tweet enviado com o Tweet myPost
 
 == Changelog ==
+
+= 1.9.5 =
+* Corrigido pequenos erros.
+* Adicionado vídeo explicativo: http://youtu.be/y9BROm8TW4Y?hd=1
 
 = 1.9.4 =
 * Corrigido pequenos erros.

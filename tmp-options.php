@@ -14,9 +14,6 @@
 		if(trim($_POST['type_short']) == 'tinyurl'){
 			$options['shorturl']    = array('tinyurl' => 'http://tinyurl.com/api-create.php?url=%link%');
 		}
-		if(trim($_POST['type_short']) == 'vai.la'){
-			$options['shorturl']    = array('vai.la' => 'http://vai.la/link/api/?url=%link%');
-		}
 		if(trim($_POST['type_short']) == 'bit.ly'){
 			$options['shorturl']    = array('bit.ly' => 'http://api.bit.ly/v3/shorten?login='.trim($_POST['login']).'&apiKey='.trim($_POST['apikey']).'&longUrl=%link%&format=txt',
 											'login' => trim($_POST['login']),
@@ -64,8 +61,57 @@
 		$apikey	= 'R_9575276ff0a6d580077227bed2c4f11e';
 	}
 	?>
-	<table border="0" cellpadding="5" cellspacing="10" width="100%">
+	<table border="0" cellpadding="5" cellspacing="10" width="800">
 		<tr>
+			<td valign="top" width="50%">
+				<div id="poststuff">
+					<div class="postbox">
+						<h3 class="hndle"><?php echo __('Support', 'tweet_mypost');?></h3>
+						<div class="inside">
+							<p>
+							<strong>
+							<?php echo __('Already have access token?', 'tweet_mypost');?>
+							</strong>
+							<br/>
+							<?php echo __('Register your <a href="http://dev.twitter.com/apps/new" target="_blank">application on Twitter</a>.', 'tweet_mypost');?>
+							</p>
+							<p>
+							<iframe width="350" height="230" src="http://www.youtube.com/embed/y9BROm8TW4Y?rel=0" frameborder="0" allowfullscreen></iframe>
+							</p>
+						</div>
+					</div>
+				</div>
+				<div id="poststuff">
+					<div class="postbox">
+						<h3 class="hndle"><?php echo __('How to support me?', 'tweet_mypost');?></h3>
+						<div class="inside">
+							<p>
+							<strong><?php echo __('Help me to improve the plugin.', 'tweet_mypost');?></strong>
+							<br/>
+							<?php echo __('Send me bug reports, bugfixes, code modifications or your ideas.', 'tweet_mypost');?>
+							</p>
+							<p>
+							<strong><?php echo __('Make a translation of the plugin.', 'tweet_mypost');?></strong>
+							<br/>
+							<?php echo __('The give other users more comfort help me to translate it to all languages.', 'tweet_mypost');?>
+							</p>
+							<p>
+							<strong><?php echo __('Share', 'tweet_mypost');?></strong>
+							<br/>
+							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/tweet-mypost/" data-text="#wp #plugin Tweet myPost. I use." data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
+							<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwordpress.org%2Fextend%2Fplugins%2Ftweet-mypost%2F&amp;send=false&amp;layout=button_count&amp;width=150&amp;show_faces=false&amp;action=recommend&amp;colorscheme=light&amp;font&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:150px; height:21px;" allowTransparency="true"></iframe>
+							</p>
+							<p>
+							<strong><?php echo __('Do you like?', 'tweet_mypost');?></strong>
+							<br/>
+							<a href="https://twitter.com/glomm3r" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @glomm3r</a>
+							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+							<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fglomm3r&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=264202633641968" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
+							</p>
+						</div>
+					</div>
+				</div>
+			</td>
 			<td valign="top" width="50%">
 				<div id="poststuff">
 					<div class="postbox">
@@ -110,10 +156,7 @@
 								<td><label><input name="type_short" type="radio" value="migre.me" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'migre.me'){echo'checked';}?>/> migre.me</label></td>
 							</tr>
 							<tr>
-								<td><label><input name="type_short" type="radio" value="vai.la" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='none';" <?php if($shorturl[0] == 'vai.la'){echo'checked';}?>/> vai.la</label></td>
-								<td><label><input name="type_short" type="radio" value="bit.ly" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='block';" <?php if($shorturl[0] == 'bit.ly'){echo'checked';}?>/> bit.ly</label></td>
-							</tr>
-							<tr>
+								<td><label><input name="type_short" type="radio" value="bit.ly" onclick="document.getElementById('customapi').style.display='none'; document.getElementById('bitly').style.display='block';" <?php if($shorturl[0] == 'bit.ly'){echo'checked';}?>/> bitly</label></td>
 								<td><label><input name="type_short" type="radio" value="custom" onclick="document.getElementById('bitly').style.display='none'; document.getElementById('customapi').style.display='block';" <?php if($shorturl[0] == 'custom'){echo'checked';}?>/> <?php echo __('Custom', 'tweet_mypost');?></label></td>
 							</tr>
 						</table>
@@ -124,8 +167,8 @@
 										<p><small>%link% - <?php echo __('Post URL', 'tweet_mypost');?></small></p>
 									</div>
 									<div id="bitly" style="display:none">
-										<label style="display:inline-block;width:125px;"><strong>Login bit.ly</strong></label> <input name="login" size="25" type="text" value="<?php echo($login);?>" /><br />
-										<label style="display:inline-block;width:125px;"><strong>apiKey bit.ly</strong></label> <input name="apikey" size="25" type="text" value="<?php echo($apikey);?>" />
+										<label style="display:inline-block;width:125px;"><strong>login bitly</strong></label> <input name="login" size="25" type="text" value="<?php echo($login);?>" /><br />
+										<label style="display:inline-block;width:125px;"><strong>apikey bitly</strong></label> <input name="apikey" size="25" type="text" value="<?php echo($apikey);?>" />
 									</div>
 								</td>
 							</tr>
@@ -137,52 +180,6 @@
 				<input type="submit" name="submit" class="button-primary" value="<?php echo __('Update settings', 'tweet_mypost');?>" />
 				</form>
 			</div>
-			</td>
-			<td valign="top" width="50%">
-				<div id="poststuff">
-					<div class="postbox">
-						<h3 class="hndle"><?php echo __('Support', 'tweet_mypost');?></h3>
-						<div class="inside">
-							<p>
-							<strong>
-							<?php echo __('Already have access token?', 'tweet_mypost');?>
-							</strong>
-							<br/>
-							<?php echo __('Register your <a href="http://dev.twitter.com/apps/new" target="_blank">application on Twitter</a>.', 'tweet_mypost');?>
-							</p>
-						</div>
-					</div>
-				</div>
-				<div id="poststuff">
-					<div class="postbox">
-						<h3 class="hndle"><?php echo __('How to support me?', 'tweet_mypost');?></h3>
-						<div class="inside">
-							<p>
-							<strong><?php echo __('Help me to improve the plugin.', 'tweet_mypost');?></strong>
-							<br/>
-							<?php echo __('Send me bug reports, bugfixes, code modifications or your ideas.', 'tweet_mypost');?>
-							</p>
-							<p>
-							<strong><?php echo __('Make a translation of the plugin.', 'tweet_mypost');?></strong>
-							<br/>
-							<?php echo __('The give other users more comfort help me to translate it to all languages.', 'tweet_mypost');?>
-							</p>
-							<p>
-							<strong><?php echo __('Share', 'tweet_mypost');?></strong>
-							<br/>
-							<a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wordpress.org/extend/plugins/tweet-mypost/" data-text="#wp #plugin Tweet myPost. I use." data-count="horizontal">Tweet</a><script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script>
-							<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwordpress.org%2Fextend%2Fplugins%2Ftweet-mypost%2F&amp;layout=button_count&amp;show_faces=false&amp;width=120&amp;action=like&amp;colorscheme=light&amp;height=21" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:120px; height:21px;" allowTransparency="true"></iframe>
-							</p>
-							<p>
-							<strong><?php echo __('Do you like?', 'tweet_mypost');?></strong>
-							<br/>
-							<a href="https://twitter.com/glomm3r" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @glomm3r</a>
-							<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-							<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fglomm3r&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=264202633641968" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
-							</p>
-						</div>
-					</div>
-				</div>
 			</td>
 		</tr>
 	</table>

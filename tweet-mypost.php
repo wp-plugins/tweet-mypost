@@ -1,8 +1,8 @@
 <?php
 /*
 Plugin Name: Tweet myPost
-Description: Send to twitter the posts published, using your Twitter App OAuth. Supports scheduling posts.
-Version: 1.9.4
+Description: Send to Twitter, the posts of your blog (like twitterfeed) using your own twitter oauth. Supports scheduling posts.
+Version: 1.9.5
 Author: Ronis Nascimento (@glomm3r)
 Author URI: http://www.reitor.org
 License: GPLv3
@@ -141,13 +141,9 @@ if(($post->post_status) != 'publish'){
 	}else{
 		if(($post->post_status) == 'publish'){
 			echo <<<HTML
-	<center>
-	<strong><?php echo __('Do you like?', 'tweet_mypost');?></strong>
-	<br/>
 	<a href="https://twitter.com/glomm3r" class="twitter-follow-button" data-show-count="false" data-size="large">Follow @glomm3r</a>
 	<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="//platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
 	<iframe src="//www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.facebook.com%2Fglomm3r&amp;send=false&amp;layout=button_count&amp;width=200&amp;show_faces=false&amp;action=like&amp;colorscheme=light&amp;font&amp;height=21&amp;appId=264202633641968" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:200px; height:21px;" allowTransparency="true"></iframe>
-	</center>
 HTML;
 		}
 		else{
